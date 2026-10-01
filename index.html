@@ -179,9 +179,12 @@
 
     <footer>
         <hr>
+        © <span id="year"></span>
         <p>Email: nguyenthientruongtp@gmail.com</p>
     </footer>
-
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
