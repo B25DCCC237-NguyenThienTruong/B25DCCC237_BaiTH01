@@ -1,0 +1,413 @@
+/* CÀI ĐẶT CHUNG*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+
+/*HEADER*/
+
+header {
+    height: 110px;
+    background-color: #1677d2;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    border-bottom: 1px solid #0f5fae;
+}
+
+/* Ảnh */
+.anh {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anh img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+
+/* Menu */
+
+nav {
+    display: flex;
+    gap: 45px;
+    margin: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #0f63b7;
+    border-radius: 8px;
+}
+
+
+/* Nút */
+
+header button {
+    background-color: white;
+    color: #1677d2;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #eaf3ff;
+}
+
+
+/* Nút menu điện thoại */
+
+#menuBtn {
+    display: none;
+}
+
+
+/*SECTION CHUNG*/
+
+.section {
+    padding: 70px 8%;
+    background-color: #f4f7fb;
+}
+
+.section h2 {
+    text-align: center;
+    color: #1677d2;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+
+/* GIỚI THIỆU */
+
+.gioi-thieu {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.intro {
+    max-width: 700px;
+}
+
+.intro h1 {
+    color: #1677d2;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #1677d2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #0f63b7;
+}
+
+
+/* KỸ NĂNG*/
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background-color: white;
+    border: 1px solid #d9e3ef;
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.skill:hover {
+    border-color: #1677d2;
+    box-shadow: 0 5px 15px rgba(22, 119, 210, 0.15);
+}
+
+.skill h3 {
+    color: #1677d2;
+    margin-top: 0;
+}
+
+.skill p {
+    line-height: 1.6;
+}
+
+
+/* Ẩn thông tin kỹ năng */
+
+.thong-tin {
+    display: none;
+}
+
+.skill.active .thong-tin {
+    display: block;
+}
+
+
+/* DỰ ÁN*/
+
+.du-an {
+    background-color: white;
+}
+
+#searchProject {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    padding: 13px;
+    border: 1px solid #cbd8e6;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#searchProject:focus {
+    outline: none;
+    border-color: #1677d2;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background-color: #f8fbff;
+    border: 1px solid #d9e3ef;
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.project:hover {
+    border-color: #1677d2;
+    box-shadow: 0 5px 15px rgba(22, 119, 210, 0.15);
+}
+
+.project h3 {
+    color: #1677d2;
+    margin-top: 0;
+}
+
+.project p {
+    line-height: 1.6;
+}
+
+
+/* Thông tin dự án ẩn */
+
+.thong-tin-du-an {
+    display: none;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #d9e3ef;
+}
+
+.project.active .thong-tin-du-an {
+    display: block;
+}
+
+
+/*
+   LIÊN HỆ
+*/
+
+.lien-he {
+    background-color: #f4f7fb;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #d9e3ef;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd8e6;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #1677d2;
+}
+
+#count {
+    color: #666;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: #1677d2;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #0f63b7;
+}
+
+
+/* 
+   FOOTER
+ */
+
+footer {
+    background-color: #1677d2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer hr {
+    border: none;
+}
+
+/*
+   DARK MODE
+ */
+
+.dark {
+    background-color: #171c23;
+    color: white;
+}
+
+.dark .section,
+.dark .gioi-thieu,
+.dark .lien-he {
+    background-color: #171c23;
+}
+
+.dark .du-an {
+    background-color: #171c23;
+}
+
+.dark header {
+    background-color: #0d5fa8;
+}
+
+.dark nav a {
+    color: white;
+}
+
+.dark nav a:hover {
+    background-color: #1677d2;
+}
+
+.dark .skill,
+.dark .project,
+.dark form {
+    background-color: #222a33;
+    border-color: #3b4652;
+}
+
+.dark .project {
+    background-color: #222a33;
+}
+
+.dark #searchProject,
+.dark form input,
+.dark form textarea {
+    background-color: #222a33;
+    color: white;
+    border-color: #3b4652;
+}
+
+.dark .intro h1,
+.dark .section h2,
+.dark .skill h3,
+.dark .project h3 {
+    color: #5ca9f5;
+}
+
+.dark .intro p,
+.dark .skill p,
+.dark .project p,
+.dark #count {
+    color: #c7d0da;
+}
+
+.dark .button,
+.dark form button {
+    background-color: #1677d2;
+    color: white;
+}
+
+.dark header button {
+    background-color: #222a33;
+    color: white;
+    border: 1px solid #536170;
+}
+
+

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="anh">
+            <img src="images/anh.jpg" alt="Ảnh cá nhân"> 
+        </div>
+
+        <button id="menuBtn">☰</button>
+
+        <nav id="menu">
+            <a href="#gioi-thieu">Giới thiệu</a>
+            <a href="#ky-nang">Kỹ năng</a>
+            <a href="#du-an">Dự án</a>
+            <a href="#lien-he">Liên hệ</a>
+        </nav>
+
+        <button id="themeBtn">Chuyển đổi</button>
+    </header>
+
+    <section id="gioi-thieu" class="section gioi-thieu">
+        <div class="intro">
+            <h1>Xin chào!!</h1>
+
+            <p>Em tên là Nguyễn Thiên Trường, sinh năm 2007.</p>
+
+            <p>
+                Hiện em đang là sinh viên năm hai ngành cử nhân công nghệ thông tin
+                tại Học viện Công nghệ Bưu chính Viễn thông.
+            </p>
+
+            <a href="#lien-he" class="button">
+                Thông tin liên hệ
+            </a>
+        </div>
+    </section>
+
+
+    <section id="ky-nang" class="section ky-nang">
+        <h2>Kỹ năng</h2>
+
+        <div class="skills">
+
+            <div class="skill" onclick="hienKyNang(this)">
+                <h3>HTML</h3>
+                <p class="thong-tin">
+                    Biết sử dụng HTML cơ bản để xây dựng cấu trúc một trang web.
+                </p>
+            </div>
+
+            <div class="skill" onclick="hienKyNang(this)">
+                <h3>CSS</h3>
+                <p class="thong-tin">
+                    Biết sử dụng CSS cơ bản để thiết kế giao diện một trang web.
+                </p>
+            </div>
+
+            <div class="skill" onclick="hienKyNang(this)">
+                <h3>JavaScript</h3>
+                <p class="thong-tin">
+                    Biết sử dụng JavaScript cơ bản để thêm tính năng tương tác
+                    cho một trang web.
+                </p>
+            </div>
+
+            <div class="skill" onclick="hienKyNang(this)">
+                <h3>SQL</h3>
+                <p class="thong-tin">
+                    Biết sử dụng SQL để quản lý và truy vấn dữ liệu.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="du-an" class="section du-an">
+        <h2>Dự án</h2>
+
+        <input
+            type="text"
+            id="searchProject"
+            placeholder="Tìm kiếm dự án..."
+        >
+
+        <div class="projects">
+
+            <div class="project" onclick="hienDuAn(this)">
+                <h3>GearStore (Bài tập lớn môn JS kỳ 2 năm nhất)</h3>
+
+                <p class="mo-ta-du-an">
+                    Đây là một dự án web bán hàng được xây dựng bằng HTML,
+                    CSS và JavaScript.
+                </p>
+
+                <div class="thong-tin-du-an">
+                    <p>
+                        Dự án giúp người dùng có thể duyệt qua các sản phẩm,
+                        thêm sản phẩm vào giỏ hàng và thực hiện thanh toán.
+                    </p>
+
+                    <p>
+                        Công nghệ sử dụng:
+                        HTML, CSS, JavaScript, Node.js, MongoDB, JWT
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="project" onclick="hienDuAn(this)">
+                <h3>Viết 1 trang web Máy tính</h3>
+
+                <p class="mo-ta-du-an">
+                    Dự án này về 1 chiếc máy tính cầm tay cơ bản.
+                </p>
+
+                <div class="thong-tin-du-an">
+                    <p>
+                        Giúp người dùng có thể thực hiện các phép tính
+                        cơ bản như cộng, trừ, nhân, chia.
+                    </p>
+                    <p>
+                        Đây là một dự án web máy tính được xây dựng bằng
+                        HTML, CSS và JavaScript.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="project" onclick="hienDuAn(this)">
+                <h3>Viết 1 trang web Giới thiệu bản thân</h3>
+
+                <p class="mo-ta-du-an">
+                    Website giới thiệu bản thân.
+                </p>
+
+                <div class="thong-tin-du-an">
+                    <p>
+                        Gồm cac thông tin cơ bản về bản thân, kỹ năng, dự án và liên hệ.
+                    </p>
+                    <p>
+                        Công nghệ: HTML, CSS, JavaScript
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="lien-he" class="section lien-he">
+        <h2>Liên hệ</h2>
+
+        <form id="contactForm">
+
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Tin nhắn:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <p id="count">Số ký tự: 0</p>
+
+            <button type="submit">Gửi</button>
+
+        </form>
+    </section>
+
+
+    <footer>
+        <hr>
+        <p>Email: nguyenthientruongtp@gmail.com</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
